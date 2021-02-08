@@ -53,7 +53,7 @@ class LoginForm extends React.Component {
 
         { this.state.loginFailed && <h3>Senha ou Usúario Incorreto.</h3> }
 
-        <h4>Sample Users</h4>
+        <h4>Usuários Para Testes</h4>
         <ul>
           <li>User:  fakeuser/fakepassword</li>
           <li>Admin: admin/password</li>
