@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import './Login.css'
 class LoginForm extends React.Component {
   constructor (props) {
     super(props)
@@ -42,27 +42,29 @@ class LoginForm extends React.Component {
 
   render () {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-            Nome:<br />
-          <input onChange={this.onInputChange} placeholder='Enter username' name='username' value={this.state.fields.username} type='text' />
-            Senha:<br />
-          <input onChange={this.onInputChange} placeholder='Enter password' name='password' value={this.state.fields.password} type='password' />
-          <input type='submit' value='Login' />
-        </form>
-
-        { this.state.loginFailed && <h3>Senha ou Usúario Incorreto.</h3> }
-
-        <h4>Usuários Para Testes</h4>
-        <ul>
-          <li>User:  fakeuser/fakepassword</li>
-          <li>Admin: admin/password</li>
-        </ul>
+      
+      <div className="containerPrincipal">
+      <div className="containerSecundario">
+      <div className="form-group">
+         <form onSubmit={this.handleSubmit}>
+         <label >Usuário</label>
+         <input onChange={this.onInputChange} placeholder='Enter username' name='username' value={this.state.fields.username} type='text' />
+         <label>Senha</label>
+         <input onChange={this.onInputChange} placeholder='Enter password' name='password' value={this.state.fields.password} type='password' />
+         <input type='submit' value='Login' />
+         {this.state.loginFailed && <h3>Senha ou Usúario Incorreto.</h3> }
+         </form>
+       </div>
       </div>
+      <h4>Usuários de Testes</h4>
+      <ul>
+         <li>User:  fakeuser/fakepassword</li>
+         <li>Admin: admin/password</li>
+      </ul>
+    </div>
     )
   };
 }
-
 LoginForm.propTypes = {
   login: PropTypes.func.isRequired
 }

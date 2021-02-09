@@ -29,7 +29,6 @@ class LoginPage extends React.Component {
         {from && (
           <p>
             Você tem que entrar se quiser ver.
-            <code>{from.pathname}</code>
           </p>
         )}
         {this.context.auth.loggedIn ? (

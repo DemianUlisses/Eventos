@@ -2,7 +2,6 @@
   text-align: center;
 }
 
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -36,4 +35,18 @@
 
 .button {
   margin: 10px;
+}
+
+.containerPrincipal {
+  position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid blue;
+    padding: 40px;
+    background-color: white;
+}
+
+.containerSecundario{
+  text-align: center;
 }
